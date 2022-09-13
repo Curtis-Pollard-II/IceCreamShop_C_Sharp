@@ -7,12 +7,12 @@ namespace IceCreamShop_C_Sharp.Services
     public class OrderService
     {
         private readonly OrderRepository _orderRepo;
-        public OrderService(OrderRepository orderRepo);
+        public OrderService(OrderRepository orderRepo)
         {
-            _orderRepo = OrderRepo;
+            _orderRepo = orderRepo;
         }
 
-        internal List<Order> GetOrders();
+        internal List<Order> GetOrders()
         {
             List<Order> orders = _orderRepo.GetOrders();
             return orders;
