@@ -39,6 +39,8 @@ namespace IceCreamShop_C_Sharp
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "IceCreamShop_C_Sharp", Version = "v1" });
             });
             services.AddScoped<IDbConnection>(x => CreateDbConnection());
+            services.AddTransient<OrderRepository>();
+            services.AddTransient<OrderService>();
             
             services.AddScoped<AccountsRepository>();
             services.AddScoped<AccountService>();
