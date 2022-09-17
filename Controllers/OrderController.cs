@@ -11,11 +11,11 @@ namespace IceCreamShop_C_Sharp.Controllers
     [Route("api/[controller]")]
     public class OrderController : ControllerBase
     {
-        private readonly OrderService _orderService;
+        private readonly OrdersService _ordersService;
 
-        public OrderController(OrderService orderService)
+        public OrderController(OrdersService ordersService)
         {
-            _orderService = orderService;
+            _ordersService = ordersService;
         }
 
 
@@ -24,7 +24,7 @@ namespace IceCreamShop_C_Sharp.Controllers
         {
             try 
             {
-              List<Order> orders = _orderService.GetOrders();
+              List<Order> orders = _ordersService.GetOrders();
               return Ok(orders);
             }
             catch (Exception e)

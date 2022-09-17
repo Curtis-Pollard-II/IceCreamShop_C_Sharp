@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 
 namespace IceCreamShop_C_Sharp.Models
 {
@@ -7,10 +5,11 @@ namespace IceCreamShop_C_Sharp.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Price { get; set; }
-        public int? Scoops { get; set; }
-        public string Toppings { get; set; }
+        public int Total { get; set; }
+        public string Screenshot { get; set; }
         public int Cone { get; set; }
+        public string CreatorId { get; set; }
+        public Account Creator { get; set; }
 
     }
 }

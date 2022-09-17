@@ -9,11 +9,11 @@ using IceCreamShop_C_Sharp.Models;
 
 namespace IceCreamShop_C_Sharp.Repositories
 {
-    public class OrderRepository
+    public class OrdersRepository
     {
         private readonly IDbConnection _db;
 
-        public OrderRepository(IDbConnection db)
+        public OrdersRepository(IDbConnection db)
         {
             _db = db;
         }

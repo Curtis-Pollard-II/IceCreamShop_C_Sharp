@@ -4,17 +4,17 @@ using IceCreamShop_C_Sharp.Repositories;
 
 namespace IceCreamShop_C_Sharp.Services
 {
-    public class OrderService
+    public class OrdersService
     {
-        private readonly OrderRepository _orderRepo;
-        public OrderService(OrderRepository orderRepo)
+        private readonly OrdersRepository _ordersRepo;
+        public OrdersService(OrdersRepository ordersRepo)
         {
-            _orderRepo = orderRepo;
+            _ordersRepo = ordersRepo;
         }
 
         internal List<Order> GetOrders()
         {
-            List<Order> orders = _orderRepo.GetOrders();
+            List<Order> orders = _ordersRepo.GetOrders();
             return orders;
         }
     }
